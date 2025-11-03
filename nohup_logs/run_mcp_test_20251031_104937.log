@@ -1,0 +1,93 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: hr-green-card-consultation
+Use released image ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m10:49:44 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0, short name is hr-green-card-consultation-image
+[92m10:49:44 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m10:49:44 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+[92m10:49:48 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun] build finished.
+[92m10:49:48 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun] with more generic tag [oh_v0.42.0_zjvqtg4z1llz5com]
+[92m10:49:48 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun, oh_v0.42.0_zjvqtg4z1llz5com] built successfully
+[92m10:49:48 - openhands:INFO[0m: docker_runtime.py:159 - [runtime bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+[92m10:49:48 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m10:49:48 - openhands:INFO[0m: docker_runtime.py:163 - [runtime bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c] Container started: openhands-runtime-bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c. VSCode URL: None
+[92m10:49:48 - openhands:INFO[0m: docker_runtime.py:174 - [runtime bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c] Waiting for client to become ready at http://localhost:36834...
+================ DOCKER BUILD STARTED ================
+ERROR:root:  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 309, in <module>
+    call_async_from_sync(runtime.connect)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 54, in call_async_from_sync
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 44, in run
+    return asyncio.run(arun())
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 37, in arun
+    result = await coro
+             ^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 177, in connect
+    await call_sync_from_async(self.wait_until_alive)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 18, in call_sync_from_async
+    result = await coro
+             ^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+                                              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 432, in wait_until_alive
+    raise AgentRuntimeNotFoundError(
+
+ERROR:root:<class 'openhands.core.exceptions.AgentRuntimeNotFoundError'>: Container openhands-runtime-bf0e426d-9743-4933-ab36-cd3a4fcd922e-239a6ff9877c642c not found.
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rbsqlp1ibz731kz5
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rbsqlp1ibz731kz5_dqyenr9xgt9n6kun
+Deleted: sha256:7607f937bb13fc831d35c0b5d1564719882f91ec154e1cf716ca2a78e98ceff0
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+Deleted: sha256:b7a3d46612e8e745da4d20cb601b58242bf02986b787190f6226ecb8364a8a64
+Error response from daemon: No such image: 7607f937bb13:latest
+Error response from daemon: No such image: b7a3d46612e8:latest
+Error response from daemon: a prune operation is already running
+Evaluation for hr-green-card-consultation completed successfully!

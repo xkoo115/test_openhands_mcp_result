@@ -1,0 +1,54 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: hr-green-card-consultation
+Use released image ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m14:35:04 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0, short name is hr-green-card-consultation-image
+[92m14:35:04 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m14:35:04 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk
+[92m14:35:07 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk] build finished.
+[92m14:35:07 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk] with more generic tag [oh_v0.42.0_zjvqtg4z1llz5com]
+[92m14:35:07 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk, oh_v0.42.0_zjvqtg4z1llz5com] built successfully
+[92m14:35:07 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk
+[92m14:35:07 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m14:35:07 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926] Container started: openhands-runtime-84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926. VSCode URL: None
+[92m14:35:07 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926] Waiting for client to become ready at http://localhost:36980...
+[92m14:35:46 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 84432424-b2bd-4394-9781-aa86cf664f8a-b4c9e93afa02d926] Runtime is ready.
+14:35:49 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+================ DOCKER BUILD STARTED ================
+ERROR:root:  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 311, in <module>
+    init_task_env(runtime, args.server_hostname, env_llm_config)
+  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 123, in init_task_env
+    obs = runtime.run_action(action)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/base.py", line 837, in run_action
+    observation = getattr(self, action_type)(action)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/action_execution/action_execution_client.py", line 328, in send_action_for_execution
+    raise AgentRuntimeTimeoutError(
+
+ERROR:root:<class 'openhands.core.exceptions.AgentRuntimeTimeoutError'>: Runtime failed to return execute_action before the requested timeout of 599.0s
+6e1ebfab4fff
+23d30e68aec6
+6e1ebfab4fff
+23d30e68aec6
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_l12wa61k8kiat1pk
+Deleted: sha256:cbfdbd4d71c41b5b411b063d95f114f24a4d30df70bf428db3ff59af694618c5
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_5cd8v4poapvejs94
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_5cd8v4poapvejs94_l12wa61k8kiat1pk
+Deleted: sha256:4f368ccaec5fb2bb866aedccd54ce4e5afe9758952dc4b2131a722ae29d49b42
+Error response from daemon: No such image: cbfdbd4d71c4:latest
+Error response from daemon: No such image: 4f368ccaec5f:latest
+Total reclaimed space: 0B
+Evaluation for hr-green-card-consultation completed successfully!

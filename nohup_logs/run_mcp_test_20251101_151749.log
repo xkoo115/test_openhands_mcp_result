@@ -1,0 +1,13 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: finance-qualified-bill-ask-for-reimburse
+Use released image ghcr.io/theagentcompany/finance-qualified-bill-ask-for-reimburse-image:1.0.0...
+  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 154
+    instruction = "Complete the task in /instruction/task.md . Before beginning the task, plan the workflow carefully. Before concluding the task, review /instruction/task.md again and conduct a reflection and debriefing. Only conclude the task after confirming the results are correct.
+                  ^
+SyntaxError: unterminated string literal (detected at line 154)
+Total reclaimed space: 0B
+Evaluation for finance-qualified-bill-ask-for-reimburse completed successfully!

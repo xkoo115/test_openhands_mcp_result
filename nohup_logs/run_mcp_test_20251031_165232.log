@@ -1,0 +1,164 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: finance-nonqualified-bill-ask-for-reimburse
+Use released image ghcr.io/theagentcompany/finance-nonqualified-bill-ask-for-reimburse-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m16:52:39 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/finance-nonqualified-bill-ask-for-reimburse-image:1.0.0, short name is finance-nonqualified-bill-ask-for-reimburse-image
+[92m16:52:39 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m16:52:40 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_k6wt8cncmurg0tqr_jpmvtp81wzpf5t58
+[92m17:09:31 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_k6wt8cncmurg0tqr_jpmvtp81wzpf5t58] build finished.
+[92m17:09:31 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_k6wt8cncmurg0tqr_jpmvtp81wzpf5t58] with more generic tag [oh_v0.42.0_k6wt8cncmurg0tqr]
+[92m17:09:31 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_k6wt8cncmurg0tqr_jpmvtp81wzpf5t58, oh_v0.42.0_k6wt8cncmurg0tqr] built successfully
+[92m17:09:31 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 222aab83-bfe6-4c56-9daa-d9d976098384-0f9c4e066b25cdf4] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_k6wt8cncmurg0tqr_jpmvtp81wzpf5t58
+[92m17:09:31 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 222aab83-bfe6-4c56-9daa-d9d976098384-0f9c4e066b25cdf4] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m17:09:31 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 222aab83-bfe6-4c56-9daa-d9d976098384-0f9c4e066b25cdf4] Container started: openhands-runtime-222aab83-bfe6-4c56-9daa-d9d976098384-0f9c4e066b25cdf4. VSCode URL: None
+[92m17:09:31 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 222aab83-bfe6-4c56-9daa-d9d976098384-0f9c4e066b25cdf4] Waiting for client to become ready at http://localhost:30347...
+================ DOCKER BUILD STARTED ================
+ERROR:root:  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 309, in <module>
+    call_async_from_sync(runtime.connect)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 54, in call_async_from_sync
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 44, in run
+    return asyncio.run(arun())
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 37, in arun
+    result = await coro
+             ^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 177, in connect
+    await call_sync_from_async(self.wait_until_alive)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 18, in call_sync_from_async
+    result = await coro
+             ^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+                                              ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 436, in wait_until_alive
+    self.check_if_alive()
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/action_execution/action_execution_client.py", line 128, in check_if_alive
+    response = self._send_action_server_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/http_session.py", line 31, in request
+    return CLIENT.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+
+ERROR:root:<class 'httpx.ConnectError'>: [Errno 111] Connection refused
+Deleted Volumes:
+3300d9a150586eb10f48d293ea9d63e50b00827b6846bc18cdcecac7dea5f01a
+
+Total reclaimed space: 261.3MB
+Evaluation for finance-nonqualified-bill-ask-for-reimburse completed successfully!

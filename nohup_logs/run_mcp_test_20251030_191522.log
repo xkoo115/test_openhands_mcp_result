@@ -1,0 +1,271 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: hr-green-card-consultation
+Use released image ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m19:15:29 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-green-card-consultation-image:1.0.0, short name is hr-green-card-consultation-image
+[92m19:15:29 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m19:15:29 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+[92m19:15:33 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun] build finished.
+[92m19:15:33 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun] with more generic tag [oh_v0.42.0_zjvqtg4z1llz5com]
+[92m19:15:33 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun, oh_v0.42.0_zjvqtg4z1llz5com] built successfully
+[92m19:15:33 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+[92m19:15:34 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m19:15:34 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Container started: openhands-runtime-302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231. VSCode URL: None
+[92m19:15:34 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Waiting for client to become ready at http://localhost:37333...
+[92m19:16:02 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Runtime is ready.
+19:16:03 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+19:16:50 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Resetting owncloud...
+{"message":"Reset ownCloud command initiated"}
+Reset initiated for services: rocketchat owncloud
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 500
+Service owncloud not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 200
+All services are ready!
+Launching Priya Sharma
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Priya Sharma"
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+19:16:50 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+19:16:51 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+- owncloud
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m19:16:51 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat', 'owncloud']
+[92m19:16:51 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:16:51 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:8092")
+[92m19:16:54 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:16:54 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:16:56 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:16:56 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("106", "theagentcompany")
+[92m19:16:58 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:16:58 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:01 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:01 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("109", "theagentcompany")
+[92m19:17:03 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:03 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:05 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:05 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("111")
+[92m19:17:09 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:09 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:11 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:11 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m19:17:14 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:14 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:16 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:16 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m19:17:18 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:18 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:20 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:20 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m19:17:22 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:22 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m19:17:24 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:17:24 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m19:17:26 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m19:17:26 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m19:17:26 - openhands:INFO[0m: base.py:770 - [runtime 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m19:17:26 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m19:17:26 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m19:17:26 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+ERROR:mcp.client.sse:Error parsing server message: 9 validation errors for JSONRPCMessage
+JSONRPCRequest.method
+  Field required [type=missing, input_value={'jsonrpc': '2.0', 'id': ...fications/initialized'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+JSONRPCRequest.id.int
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+JSONRPCRequest.id.str
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+JSONRPCNotification.method
+  Field required [type=missing, input_value={'jsonrpc': '2.0', 'id': ...fications/initialized'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+JSONRPCResponse.id.int
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+JSONRPCResponse.id.str
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+JSONRPCResponse.result
+  Field required [type=missing, input_value={'jsonrpc': '2.0', 'id': ...fications/initialized'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+JSONRPCError.id.str
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+JSONRPCError.id.int
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+[92m19:17:26 - openhands:ERROR[0m: client.py:94 - McpError connecting to http://localhost:8082/sse: Method not found: tools/list
+[92m19:17:26 - openhands:ERROR[0m: utils.py:89 - Failed to connect to url='http://localhost:8082/sse' api_key='******': Method not found: tools/list
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/mcp/utils.py", line 83, in create_mcp_clients
+    await client.connect_http(server, conversation_id=conversation_id)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/mcp/client.py", line 92, in connect_http
+    await self._initialize_and_list_tools()
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/mcp/client.py", line 33, in _initialize_and_list_tools
+    tools = await self.client.list_tools()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/fastmcp/client/client.py", line 614, in list_tools
+    result = await self.list_tools_mcp()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/fastmcp/client/client.py", line 602, in list_tools_mcp
+    result = await self.session.list_tools()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/mcp/client/session.py", line 324, in list_tools
+    return await self.send_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Method not found: tools/list
+[92m19:17:26 - openhands:INFO[0m: utils.py:232 - Loaded 0 MCP tools: []
+[92m19:17:26 - openhands:INFO[0m: agent.py:169 - Setting 0 MCP tools for agent CodeActAgent: []
+[92m19:17:26 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 6: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor']
+[92m19:17:26 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] AgentController 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231 - created new state. start_id: 0
+[92m19:17:26 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m19:23:35 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 302d20e0-05a2-4ec2-8c30-e341c91400e6-da53abe3b2e45231] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m19:23:36 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m19:23:36 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+19:23:36 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-green-card-consultation-image.json" --result_path "/outputs/eval_hr-green-card-consultation-image.json"
+19:24:27 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 1169
+INFO:root:First 100 characters of decrypted content:
+from typing import List
+
+from scoring import Result, Checkpoint, bonus_for_completing_final
+from co
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Priya Sharma is: ["Hi Priya! I understand you're looking for information about green card filing dates. To help you find the current date for your category, I need to know a couple of things: 1) What is your country of birth? 2) Do you have an advanced degree (master's or higher) or just a bachelor's degree? This will help me determine which employment-based category you fall under.", "Hi, yes, I can provide that information. My country of birth is Nepal. I hold a master's degree, so I have an advanced degree.", 'Thank you for the information, Priya! Based on your master\'s degree, you would fall under the EB-2 category (Professionals with Advanced Degrees). Since Nepal is not specifically listed in the table, you fall under the "All Chargeability Areas" category. The current filing date for EB-2 category for all chargeability areas is 01MAR23 (March 1, 2023). This means you can file your adjustment of status application if your priority date is on or before March 1, 2023.', 'Thank you for the information! So, since I applied under the NIW category, which falls under EB-2, and my priority date is October 15, 2021, I should be able to file my adjustment of status application now, right? Just wanted to confirm.', 'Yes, that\'s correct! Since your priority date (October 15, 2021) is before the current filing date (March 1, 2023), you are eligible to file your adjustment of status application now. The filing date being "current" means USCIS is accepting applications for people with priority dates on or before that date. Your October 15, 2021 priority date is well before March 1, 2023, so you can proceed with filing your adjustment of status application.', "Great, thank you so much for confirming! I'll go ahead and prepare my application materials for filing. I really appreciate your help with this."]
+INFO:root:Chat history with Priya Sharma is: ["Hi Priya! I understand you're looking for information about green card filing dates. To help you find the current date for your category, I need to know a couple of things: 1) What is your country of birth? 2) Do you have an advanced degree (master's or higher) or just a bachelor's degree? This will help me determine which employment-based category you fall under.", "Hi, yes, I can provide that information. My country of birth is Nepal. I hold a master's degree, so I have an advanced degree.", 'Thank you for the information, Priya! Based on your master\'s degree, you would fall under the EB-2 category (Professionals with Advanced Degrees). Since Nepal is not specifically listed in the table, you fall under the "All Chargeability Areas" category. The current filing date for EB-2 category for all chargeability areas is 01MAR23 (March 1, 2023). This means you can file your adjustment of status application if your priority date is on or before March 1, 2023.', 'Thank you for the information! So, since I applied under the NIW category, which falls under EB-2, and my priority date is October 15, 2021, I should be able to file my adjustment of status application now, right? Just wanted to confirm.', 'Yes, that\'s correct! Since your priority date (October 15, 2021) is before the current filing date (March 1, 2023), you are eligible to file your adjustment of status application now. The filing date being "current" means USCIS is accepting applications for people with priority dates on or before that date. Your October 15, 2021 priority date is well before March 1, 2023, so you can proceed with filing your adjustment of status application.', "Great, thank you so much for confirming! I'll go ahead and prepare my application materials for filing. I really appreciate your help with this."]
+11:24:25 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+11:24:26 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+INFO:root:LLM evaluation completed
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+WARNING:root:Predicate "the current date of filing is 01AUG23 (August 1st, 2023)" evaluated to "False"
+INFO:root:result is: {'checkpoints': [{'total': 1, 'result': 1}, {'total': 1, 'result': 1}, {'total': 1, 'result': 0}], 'final_score': {'total': 3, 'result': 2}}
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+11:24:26 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+================ DOCKER BUILD STARTED ================
+14acbeb53f8e
+14acbeb53f8e
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com
+Untagged: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zjvqtg4z1llz5com_dqyenr9xgt9n6kun
+Deleted: sha256:b7a3d46612e8e745da4d20cb601b58242bf02986b787190f6226ecb8364a8a64
+Error response from daemon: No such image: b7a3d46612e8:latest
+Deleted Volumes:
+820db50c44e5e93cfe3c748ef54d1d40e83a3b1dee3c36ac4eba8d298f831634
+
+Total reclaimed space: 262.2MB
+Evaluation for hr-green-card-consultation completed successfully!

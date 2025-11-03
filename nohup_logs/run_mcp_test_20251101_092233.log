@@ -1,0 +1,6 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Error: Task 'admin_watch_video' not found in /root/TheAgentCompany/workspaces/tasks

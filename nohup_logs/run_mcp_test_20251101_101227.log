@@ -1,0 +1,187 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: finance-qualified-bill-ask-for-reimburse
+Use released image ghcr.io/theagentcompany/finance-qualified-bill-ask-for-reimburse-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m10:12:32 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/finance-qualified-bill-ask-for-reimburse-image:1.0.0, short name is finance-qualified-bill-ask-for-reimburse-image
+[92m10:12:32 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m10:12:32 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_p92sic8ls1ha4n6b_147uubk7vx12svrl
+[92m10:12:32 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_p92sic8ls1ha4n6b_147uubk7vx12svrl
+[92m10:12:32 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m10:12:32 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Container started: openhands-runtime-8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f. VSCode URL: None
+[92m10:12:32 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Waiting for client to become ready at http://localhost:34339...
+[92m10:13:02 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Runtime is ready.
+10:13:04 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+10:13:19 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Resetting owncloud...
+{"message":"Reset ownCloud command initiated"}
+Reset initiated for services: rocketchat owncloud
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 500
+Service owncloud not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 200
+All services are ready!
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+10:13:19 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+10:13:20 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- owncloud
+- rocketchat
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m10:13:20 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['owncloud', 'rocketchat']
+[92m10:13:20 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:20 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:8092")
+[92m10:13:23 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:23 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:25 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:25 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("106", "theagentcompany")
+[92m10:13:28 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:28 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:30 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:30 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("109", "theagentcompany")
+[92m10:13:32 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:32 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:35 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("111")
+[92m10:13:38 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:38 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:40 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:40 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m10:13:43 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:43 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:45 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:45 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m10:13:47 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:47 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:49 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:49 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m10:13:51 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:51 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:13:53 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:13:53 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m10:13:55 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m10:13:55 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m10:13:55 - openhands:INFO[0m: base.py:770 - [runtime 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m10:13:55 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m10:13:55 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m10:13:55 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:13:55 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:13:55 - openhands:INFO[0m: utils.py:232 - Loaded 1 MCP tools: ['analyze_image_with_qwen']
+[92m10:13:55 - openhands:INFO[0m: agent.py:169 - Setting 1 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen']
+[92m10:13:55 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 7: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen']
+[92m10:13:55 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] AgentController 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f - created new state. start_id: 0
+[92m10:13:55 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m10:19:42 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 8eeb541d-d854-42c0-b99c-deb1267dc8df-7b8af3bbfd55da1f] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m10:19:43 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m10:19:43 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:19:43 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_finance-qualified-bill-ask-for-reimburse-image.json" --result_path "/outputs/eval_finance-qualified-bill-ask-for-reimburse-image.json"
+10:20:36 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 1142
+INFO:root:First 100 characters of decrypted content: import os
+import requests
+from typing import List
+from common import get_rocketchat_personal_chat_hi
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Mike Chen is: ['Hi Mike, I was asked to find the receipt for reimbursement in /Documents/Financials/receipt.jpg on OwnCloud, but I cannot locate this file. I have reviewed the Reimbursement Policy and understand the criteria, but without the receipt, I cannot determine the specific price that can be reimbursed. Could you please provide the receipt or clarify its location?']
+INFO:root:result is: {'checkpoints': [{'total': 1, 'result': 1}, {'total': 1, 'result': 1}, {'total': 1, 'result': 1}, {'total': 2, 'result': 0}], 'final_score': {'total': 5, 'result': 3}}
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+Deleted Volumes:
+094ab39abbf166145af5f32d5162f37b944c280bd9b91d7ebed2e47d786cbf00
+
+Total reclaimed space: 261.3MB
+Evaluation for finance-qualified-bill-ask-for-reimburse completed successfully!
