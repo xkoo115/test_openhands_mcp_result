@@ -14,15 +14,15 @@
         },
         {
             "total": 1,
-            "result": 0
+            "result": 1
         },
         {
             "total": 1,
-            "result": 0
+            "result": 1
         }
     ],
     "final_score": {
         "total": 5,
-        "result": 3
+        "result": 5
     }
 }
