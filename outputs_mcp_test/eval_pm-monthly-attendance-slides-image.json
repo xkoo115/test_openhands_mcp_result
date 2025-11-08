@@ -14,11 +14,11 @@
         },
         {
             "total": 1,
-            "result": 0
+            "result": 1
         }
     ],
     "final_score": {
         "total": 4,
-        "result": 2
+        "result": 3
     }
 }
