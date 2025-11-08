@@ -6,7 +6,7 @@
         },
         {
             "total": 1,
-            "result": 1
+            "result": 0
         },
         {
             "total": 2,
@@ -19,6 +19,6 @@
     ],
     "final_score": {
         "total": 6,
-        "result": 2
+        "result": 1
     }
 }
