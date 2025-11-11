@@ -2,11 +2,7 @@
     "checkpoints": [
         {
             "total": 1,
-            "result": 1
-        },
-        {
-            "total": 1,
-            "result": 1
+            "result": 0
         },
         {
             "total": 1,
@@ -14,11 +10,15 @@
         },
         {
             "total": 1,
-            "result": 1
+            "result": 0
+        },
+        {
+            "total": 1,
+            "result": 0
         }
     ],
     "final_score": {
         "total": 4,
-        "result": 3
+        "result": 0
     }
 }
