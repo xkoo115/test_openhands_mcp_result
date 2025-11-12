@@ -1,0 +1,179 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_mcp_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: hr-make-slides-introduce-leadership
+Use released image ghcr.io/theagentcompany/hr-make-slides-introduce-leadership-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m11:36:37 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-make-slides-introduce-leadership-image:1.0.0, short name is hr-make-slides-introduce-leadership-image
+[92m11:36:37 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m11:36:37 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_yxo476q6uzacn3br_zv28h9xsnoq3zhn4
+[92m11:52:52 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_yxo476q6uzacn3br_zv28h9xsnoq3zhn4] build finished.
+[92m11:52:52 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_yxo476q6uzacn3br_zv28h9xsnoq3zhn4] with more generic tag [oh_v0.42.0_yxo476q6uzacn3br]
+[92m11:52:52 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_yxo476q6uzacn3br_zv28h9xsnoq3zhn4, oh_v0.42.0_yxo476q6uzacn3br] built successfully
+[92m11:52:52 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_yxo476q6uzacn3br_zv28h9xsnoq3zhn4
+[92m11:52:53 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m11:52:53 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Container started: openhands-runtime-0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763. VSCode URL: None
+[92m11:52:53 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Waiting for client to become ready at http://localhost:36829...
+[92m11:53:21 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Runtime is ready.
+11:53:22 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+11:53:23 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Reset initiated for services: rocketchat
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+All services are ready!
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+11:53:23 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+11:53:23 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m11:53:23 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat']
+[92m11:53:23 - openhands:INFO[0m: browsing.py:239 - Skipping login for owncloud because it's not in the list of services to reset
+[92m11:53:23 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:23 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m11:53:27 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:27 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:53:29 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:29 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m11:53:31 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:31 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:53:33 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:33 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m11:53:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:35 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:53:37 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:53:37 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m11:53:39 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m11:53:39 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m11:53:39 - openhands:INFO[0m: base.py:770 - [runtime 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m11:53:39 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m11:53:39 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m11:53:39 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:53:39 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:53:39 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:53:39 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:53:39 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:53:39 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:53:39 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:53:39 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] AgentController 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763 - created new state. start_id: 0
+[92m11:53:39 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m11:53:47 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:53:47 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:53:47 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:53:47 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:53:51 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:53:51 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:53:51 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:53:51 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:56:20 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:56:20 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:56:20 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:56:20 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:56:35 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 0ed3bfb3-9966-431b-bfff-fbfe2cb1d9d2-d838133b1025c763] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m11:56:35 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m11:56:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:56:35 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-make-slides-introduce-leadership-image.json" --result_path "/outputs/eval_hr-make-slides-introduce-leadership-image.json"
+11:57:38 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 2581
+INFO:root:First 100 characters of decrypted content: import os
+import logging
+from typing import List
+
+import pptx
+
+from common import create_rocketchat_
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Chen Xinyi is: ['Hello Chen Xinyi! I have completed the leadership team presentation for the investor meetings. The PowerPoint file has been saved to /workspace/leadership_intro.pptx with 5 slides covering CTO, Sales Director, Marketing Manager, Finance Director, and HR Manager positions as requested.']
+WARNING:root:Name Sarah Johnson not found in slide leadership team company leadership introduction
+WARNING:root:Position CTO not found in slide leadership team company leadership introduction
+INFO:root:result is: {'checkpoints': [{'total': 1, 'result': 1}, {'total': 1, 'result': 1}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}], 'final_score': {'total': 5, 'result': 2}}
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+================ DOCKER BUILD STARTED ================
+Deleted Volumes:
+73e84137ceb31dce7be69ccef17d61b94802ed315cb784eb267df8eeb973e61f
+bea9c3a5cc54ddd6c41c0fea999d58dc34c1b159bbeeef56df23ce5b4117c9c2
+9bc0ebe9e77209a5e210cf0ca7fc5300e6f707a0ecdd6164f2708cb6a3ed6584
+17639bd67fe11aee45ffe8ea7cd2afcc05fb0801592a7dfb0301f708a35186a6
+cd9659d1b641714d6ef14988d06673fff724b895ac46c6529e21a91758bd7137
+a8066bb68e4c371586774423a26549bfca0f5594d7567ae3028a5ea1de9f43fd
+82688788dd895bfb2aed7fd245540e422893740a892a9f0c213469c4af242665
+8abfa2093eb6cf46fee1db33750054775997a0513dc39a16292f8113859311b9
+e2a95a136e6437c921c3ee69b538309c1a172d5c63f2e1609337c284f5fcd3e7
+
+Total reclaimed space: 0B
+Evaluation for hr-make-slides-introduce-leadership completed successfully!

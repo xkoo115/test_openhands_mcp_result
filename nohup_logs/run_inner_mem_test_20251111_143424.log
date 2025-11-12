@@ -1,0 +1,6 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_inner_mem_test
+Server hostname: localhost
+Run NPC tasks only: false
+Skipping hr-new-grad-job-description-3 - evaluation file already exists

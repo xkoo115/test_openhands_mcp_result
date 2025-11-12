@@ -1,0 +1,1215 @@
+Using agent LLM config: llm.deepseek_v32
+Using environment LLM config: llm.qwen_plus
+Outputs path: /root/TheAgentCompany/evaluation/outputs_inter_mem_test
+Server hostname: localhost
+Run NPC tasks only: false
+Running evaluation for task: hr-pick-interviewer-1
+Use released image ghcr.io/theagentcompany/hr-pick-interviewer-1-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m09:45:52 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-pick-interviewer-1-image:1.0.0, short name is hr-pick-interviewer-1-image
+[92m09:45:52 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m09:45:52 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_nyfuux5nzh6kx1bj_zv28h9xsnoq3zhn4
+[92m09:45:52 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_nyfuux5nzh6kx1bj_zv28h9xsnoq3zhn4
+[92m09:45:52 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m09:45:52 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Container started: openhands-runtime-414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb. VSCode URL: None
+[92m09:45:52 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Waiting for client to become ready at http://localhost:36754...
+[92m09:46:22 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Runtime is ready.
+09:46:23 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+09:47:09 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Resetting owncloud...
+{"message":"Reset ownCloud command initiated"}
+Reset initiated for services: rocketchat owncloud
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 500
+Service owncloud not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 200
+All services are ready!
+Launching Chen Xinyi
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Chen Xinyi"
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+09:47:09 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+09:47:09 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+- owncloud
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m09:47:09 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat', 'owncloud']
+[92m09:47:09 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:09 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:8092")
+[92m09:47:13 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:13 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:15 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:15 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("106", "theagentcompany")
+[92m09:47:17 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:17 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:20 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:20 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("109", "theagentcompany")
+[92m09:47:22 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:22 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:24 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:24 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("111")
+[92m09:47:27 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:27 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:29 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:29 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m09:47:33 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:33 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:35 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m09:47:37 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:37 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:39 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:39 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m09:47:41 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:41 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m09:47:43 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:47:43 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m09:47:45 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m09:47:45 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m09:47:45 - openhands:INFO[0m: base.py:770 - [runtime 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m09:47:45 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m09:47:45 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m09:47:45 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m09:47:45 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m09:47:45 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m09:47:45 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:47:45 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:47:45 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:47:45 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:47:45 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] AgentController 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb - created new state. start_id: 0
+[92m09:47:45 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m09:47:53 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m09:47:53 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m09:47:53 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m09:47:53 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:47:57 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m09:47:57 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m09:47:57 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m09:47:57 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:48:00 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m09:48:00 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m09:48:00 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m09:48:00 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:48:04 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m09:48:04 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m09:48:04 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m09:48:04 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m09:52:29 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 414b22c5-66dc-459f-8a6c-7feb09994ad2-81d5c96b50b61ddb] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m09:52:31 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m09:52:31 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+09:52:31 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-pick-interviewer-1-image.json" --result_path "/outputs/eval_hr-pick-interviewer-1-image.json"
+09:53:24 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 3162
+INFO:root:First 100 characters of decrypted content: import logging
+import json
+from typing import List
+from scoring import Result, Checkpoint
+from commo
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Chen Xinyi is: ['Hi Chen Xinyi, I need the tech stack information for these potential interviewers: Mark Johnson, Jessica Lee, David Wong, Emily Zhou. Could you please provide their tech stacks so I can match them with a candidate?', 'Sure, here is the technical background for each team member: Emily Zhou leads web crawler development with expertise in Go for distributed systems, Python, Java backend development, and distributed system architecture. Mark Johnson has a background in sales and business development. Jessica Lee specializes in marketing and brand management. David Wong has expertise in finance and budget management.']
+01:53:22 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+01:53:23 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:root:LLM evaluation completed
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+WARNING:root:Predicate "the examinee has a chat with the leader {LEADER_NAME} on the interviewer (there could be some irrelevant messages, but if could can find any message that is related to the interviewer, it should be considered as a chat)" evaluated to "False"
+ERROR:root:There is no direct message with leader Chen Xinyi
+INFO:root:Chat history with Emily Zhou is: ['We identified a promising candidate whose tech stack matches your expertise. Would you be available to conduct a technical interview this week?']
+01:53:23 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+01:53:23 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:root:LLM evaluation completed
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:root:Predicate "there is a conversation about whether someone is available for a technical interview" evaluated to "True"
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+01:53:23 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:Chat history with Mark Johnson is: []
+WARNING:root:No chat history found for user: Mark Johnson
+INFO:root:Chat history with Jessica Lee is: []
+WARNING:root:No chat history found for user: Jessica Lee
+INFO:root:Chat history with David Wong is: []
+WARNING:root:No chat history found for user: David Wong
+INFO:root:result is: {'checkpoints': [{'total': 2, 'result': 0}, {'total': 2, 'result': 2}, {'total': 2, 'result': 2}], 'final_score': {'total': 6, 'result': 4}}
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+Deleted Volumes:
+d7764f8332f0862fdf286a51fe6921f4a7f5d3d1492bebf1ed069fb8ff9212a2
+
+Total reclaimed space: 261.3MB
+Running evaluation for task: hr-pick-interviewer-2
+Use released image ghcr.io/theagentcompany/hr-pick-interviewer-2-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m09:53:34 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-pick-interviewer-2-image:1.0.0, short name is hr-pick-interviewer-2-image
+[92m09:53:34 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m09:53:34 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_0bnjzg514n7de0bo_zv28h9xsnoq3zhn4
+[92m10:10:00 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_0bnjzg514n7de0bo_zv28h9xsnoq3zhn4] build finished.
+[92m10:10:00 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_0bnjzg514n7de0bo_zv28h9xsnoq3zhn4] with more generic tag [oh_v0.42.0_0bnjzg514n7de0bo]
+[92m10:10:00 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_0bnjzg514n7de0bo_zv28h9xsnoq3zhn4, oh_v0.42.0_0bnjzg514n7de0bo] built successfully
+[92m10:10:00 - openhands:INFO[0m: docker_runtime.py:159 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_0bnjzg514n7de0bo_zv28h9xsnoq3zhn4
+[92m10:10:00 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m10:10:00 - openhands:INFO[0m: docker_runtime.py:163 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Container started: openhands-runtime-76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9. VSCode URL: None
+[92m10:10:00 - openhands:INFO[0m: docker_runtime.py:174 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Waiting for client to become ready at http://localhost:31617...
+[92m10:10:26 - openhands:INFO[0m: docker_runtime.py:180 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Runtime is ready.
+10:10:27 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+10:11:05 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Reset initiated for services: rocketchat
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 500
+Service rocketchat not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service rocketchat healthcheck status: 200
+All services are ready!
+Launching Chen Xinyi
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Chen Xinyi"
+Launching Mark Johnson
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Mark Johnson"
+Launching Jessica Lee
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Jessica Lee"
+Launching Emily Zhou
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Emily Zhou"
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+10:11:05 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+10:11:06 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m10:11:06 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat']
+[92m10:11:06 - openhands:INFO[0m: browsing.py:239 - Skipping login for owncloud because it's not in the list of services to reset
+[92m10:11:06 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:06 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m10:11:09 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:09 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:11:11 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:11 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m10:11:13 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:13 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:11:15 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:15 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m10:11:17 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:17 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:11:19 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:11:19 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m10:11:21 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m10:11:21 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m10:11:21 - openhands:INFO[0m: base.py:770 - [runtime 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m10:11:21 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m10:11:21 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m10:11:21 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:11:21 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:11:21 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:11:21 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:11:21 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:11:21 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:11:21 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:11:21 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] AgentController 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9 - created new state. start_id: 0
+[92m10:11:21 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m10:11:31 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:11:31 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:11:31 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:11:31 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:11:34 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:11:35 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:11:35 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:11:35 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:15:23 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:15:23 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:15:23 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:15:23 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:15:35 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller 76cd546d-8314-451d-9a14-40c8cd539cec-d48e41d79d1decd9] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m10:15:37 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m10:15:37 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:15:37 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-pick-interviewer-2-image.json" --result_path "/outputs/eval_hr-pick-interviewer-2-image.json"
+10:16:28 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 2867
+INFO:root:First 100 characters of decrypted content: import logging
+import json
+from typing import List
+from scoring import Result, Checkpoint
+from commo
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Chen Xinyi is: ['Hello Chen Xinyi, I need to find an interviewer for a candidate. Could you please provide me with a list of available interviewers?', 'Sure, here are the available interviewers: Mark Johnson, Jessica Lee, Emily Zhou, and David Wong. Let me know if you need any further details about them.']
+02:16:26 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+02:16:27 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+INFO:root:LLM evaluation completed
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+WARNING:root:Predicate "the examinee has a chat with the leader {LEADER_NAME} on the available interviewer list (there could be some irrelevant messages, but if could can find any message that is related to the interviewer, it should be considered as a chat)" evaluated to "False"
+ERROR:root:There is no direct message with leader Chen Xinyi
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:Chat history with Emily Zhou is: ['Hello Emily, I need to find an interviewer for a candidate. Are you available to conduct an interview?', "Hi, yes I'm available. I'd be happy to help with the interview."]
+02:16:27 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+02:16:27 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+INFO:root:LLM evaluation completed
+INFO:root:Predicate "there is a conversation about whether someone is available for a technical interview" evaluated to "True"
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:Chat history with Mark Johnson is: ['Hello Mark, I need to find an interviewer for a candidate. Are you available to conduct an interview?', "Hi, I'm currently swamped with sales targets and team management this week. I won't be able to conduct the interview, but I trust your judgment in finding the right person for the role. Let me know if there's another way I can support.", 'Thank you for letting me know, Mark. I understand you are busy. I will reach out to the other available interviewers.', "Appreciate you understanding, and please keep me in the loop if there's any way I can contribute without taking time away from my current priorities. Let me know how it goes with the other interviewers."]
+02:16:27 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+02:16:27 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:root:LLM evaluation completed
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+WARNING:root:Predicate "there is a conversation about whether someone is available for a technical interview" evaluated to "False"
+ERROR:root:The examinee did not send the message to Mark Johnson
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:16:27 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:result is: {'checkpoints': [{'total': 2, 'result': 0}, {'total': 2, 'result': 0}, {'total': 2, 'result': 2}], 'final_score': {'total': 6, 'result': 2}}
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+================ DOCKER BUILD STARTED ================
+Total reclaimed space: 0B
+Running evaluation for task: hr-pick-interviewer-3
+Use released image ghcr.io/theagentcompany/hr-pick-interviewer-3-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m10:16:35 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-pick-interviewer-3-image:1.0.0, short name is hr-pick-interviewer-3-image
+[92m10:16:35 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m10:16:35 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rahz1r36ze5m41sg_zv28h9xsnoq3zhn4
+[92m10:33:21 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rahz1r36ze5m41sg_zv28h9xsnoq3zhn4] build finished.
+[92m10:33:21 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rahz1r36ze5m41sg_zv28h9xsnoq3zhn4] with more generic tag [oh_v0.42.0_rahz1r36ze5m41sg]
+[92m10:33:21 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_rahz1r36ze5m41sg_zv28h9xsnoq3zhn4, oh_v0.42.0_rahz1r36ze5m41sg] built successfully
+[92m10:33:21 - openhands:INFO[0m: docker_runtime.py:159 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_rahz1r36ze5m41sg_zv28h9xsnoq3zhn4
+[92m10:33:21 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m10:33:22 - openhands:INFO[0m: docker_runtime.py:163 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Container started: openhands-runtime-a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198. VSCode URL: None
+[92m10:33:22 - openhands:INFO[0m: docker_runtime.py:174 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Waiting for client to become ready at http://localhost:39689...
+[92m10:33:52 - openhands:INFO[0m: docker_runtime.py:180 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Runtime is ready.
+10:33:53 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+10:34:24 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Reset initiated for services: rocketchat
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+All services are ready!
+Launching Emily Zhou
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Emily Zhou"
+Launching Jessica Lee
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Jessica Lee"
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+10:34:24 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+10:34:24 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m10:34:24 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat']
+[92m10:34:24 - openhands:INFO[0m: browsing.py:239 - Skipping login for owncloud because it's not in the list of services to reset
+[92m10:34:24 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:24 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m10:34:28 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:28 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:34:30 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:30 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m10:34:32 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:32 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:34:33 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:33 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m10:34:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:35 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:34:37 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:34:37 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m10:34:39 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m10:34:39 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m10:34:39 - openhands:INFO[0m: base.py:770 - [runtime a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m10:34:39 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m10:34:39 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m10:34:39 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:34:39 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:34:39 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:34:39 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:34:39 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:34:39 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:34:39 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:34:39 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] AgentController a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198 - created new state. start_id: 0
+[92m10:34:39 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m10:34:47 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:34:47 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:34:47 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:34:47 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:34:51 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:34:51 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:34:51 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:34:51 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:37:22 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:37:22 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:37:22 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:37:22 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:37:35 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller a01bd969-81ed-45bf-9ac3-233c3d5237bc-566c59e039049198] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m10:37:36 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m10:37:36 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:37:36 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-pick-interviewer-3-image.json" --result_path "/outputs/eval_hr-pick-interviewer-3-image.json"
+10:38:35 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 2599
+INFO:root:First 100 characters of decrypted content: import logging
+from typing import List
+from scoring import Result, Checkpoint
+from common import cre
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with Emily Zhou is: ['Hello Emily! I hope you are doing well. I was wondering if you would be available to conduct an interview? Your expertise in web crawling and distributed systems would be very valuable for our candidate assessment.', "Hi, thanks for reaching out. I'm currently swamped with the Colly framework rollout and won't be able to take on interview duties. Have you considered Jessica Lee from the data pipeline team? She's got a strong background in distributed systems and has been doing great work on crawler optimization—she'd be a solid fit for this.", "I understand you're busy with the Colly framework rollout, and I appreciate your suggestion about Jessica Lee. However, we specifically need your expertise in web crawling and Go for this particular candidate assessment. Would it be possible to schedule just a brief 30-minute interview? We can work around your schedule.", "I appreciate the flexibility, but I really can't commit to it right now—even a short interview would be a stretch with the current deadlines. Jessica was my first recommendation because she's fully up to speed on both the technical stack and evaluation process. If for some reason she's not available, then I can reassess, but I’d strongly suggest starting with her.", 'I understand your concerns about the timeline. This is actually a critical requirement for a senior web crawling position, and your specific expertise with Go and the Colly framework is exactly what we need to properly assess this candidate. We can make it extremely convenient - we can do it during your lunch break, after hours, or even split it into two 15-minute sessions. Your input would be invaluable for this hiring decision.', "I understand this is important, but my bandwidth is completely tied up until the Colly rollout stabilizes—likely for the next two weeks. Jessica Lee has already co-authored parts of the framework and mentors junior crawler engineers; she can assess Go proficiency and system design just as effectively. If leadership confirms she's unavailable, I’ll make space. But I’m confident she’s the right call here."]
+02:38:33 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+02:38:34 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:root:LLM evaluation completed
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+WARNING:root:Predicate "In the end, the person (Emily Zhou) agrees to interview." evaluated to "False"
+ERROR:root:There is no direct message with Emily Zhou
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:Chat history with Emily Zhou is: ['Hello Emily! I hope you are doing well. I was wondering if you would be available to conduct an interview? Your expertise in web crawling and distributed systems would be very valuable for our candidate assessment.', "Hi, thanks for reaching out. I'm currently swamped with the Colly framework rollout and won't be able to take on interview duties. Have you considered Jessica Lee from the data pipeline team? She's got a strong background in distributed systems and has been doing great work on crawler optimization—she'd be a solid fit for this.", "I understand you're busy with the Colly framework rollout, and I appreciate your suggestion about Jessica Lee. However, we specifically need your expertise in web crawling and Go for this particular candidate assessment. Would it be possible to schedule just a brief 30-minute interview? We can work around your schedule.", "I appreciate the flexibility, but I really can't commit to it right now—even a short interview would be a stretch with the current deadlines. Jessica was my first recommendation because she's fully up to speed on both the technical stack and evaluation process. If for some reason she's not available, then I can reassess, but I’d strongly suggest starting with her.", 'I understand your concerns about the timeline. This is actually a critical requirement for a senior web crawling position, and your specific expertise with Go and the Colly framework is exactly what we need to properly assess this candidate. We can make it extremely convenient - we can do it during your lunch break, after hours, or even split it into two 15-minute sessions. Your input would be invaluable for this hiring decision.', "I understand this is important, but my bandwidth is completely tied up until the Colly rollout stabilizes—likely for the next two weeks. Jessica Lee has already co-authored parts of the framework and mentors junior crawler engineers; she can assess Go proficiency and system design just as effectively. If leadership confirms she's unavailable, I’ll make space. But I’m confident she’s the right call here."]
+02:38:34 - LiteLLM:INFO: utils.py:3064 -
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= qwen-plus; provider = openai
+INFO:httpx:HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+02:38:34 - LiteLLM:INFO: utils.py:1215 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:root:LLM evaluation completed
+INFO:root:Predicate "there is a conversation about whether someone is available for a technical interview" evaluated to "True"
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: openai/qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: openai/qwen-plus
+02:38:34 - LiteLLM:INFO: cost_calculator.py:655 - selected model name for cost calculation: qwen-plus
+INFO:LiteLLM:selected model name for cost calculation: qwen-plus
+INFO:root:Chat history with Jessica Lee is: []
+WARNING:root:No chat history found for user: Jessica Lee
+ERROR:root:Right message was not conveyed to the potential interviewer Jessica Lee
+INFO:root:result is: {'checkpoints': [{'total': 2, 'result': 0}, {'total': 1, 'result': 1}, {'total': 1, 'result': 0}], 'final_score': {'total': 4, 'result': 1}}
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+================ DOCKER BUILD STARTED ================
+Total reclaimed space: 0B
+Running evaluation for task: hr-new-grad-job-description
+Use released image ghcr.io/theagentcompany/hr-new-grad-job-description-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m10:38:42 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-new-grad-job-description-image:1.0.0, short name is hr-new-grad-job-description-image
+[92m10:38:42 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m10:38:42 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_q2v3h93lyeodcifk_zv28h9xsnoq3zhn4
+[92m10:54:54 - openhands:INFO[0m: docker.py:222 - Image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_q2v3h93lyeodcifk_zv28h9xsnoq3zhn4] build finished.
+[92m10:54:54 - openhands:INFO[0m: docker.py:227 - Re-tagged image [ghcr.io/all-hands-ai/runtime:oh_v0.42.0_q2v3h93lyeodcifk_zv28h9xsnoq3zhn4] with more generic tag [oh_v0.42.0_q2v3h93lyeodcifk]
+[92m10:54:54 - openhands:INFO[0m: docker.py:243 - Image ghcr.io/all-hands-ai/runtime with tags [oh_v0.42.0_q2v3h93lyeodcifk_zv28h9xsnoq3zhn4, oh_v0.42.0_q2v3h93lyeodcifk] built successfully
+[92m10:54:55 - openhands:INFO[0m: docker_runtime.py:159 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_q2v3h93lyeodcifk_zv28h9xsnoq3zhn4
+[92m10:54:55 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m10:54:55 - openhands:INFO[0m: docker_runtime.py:163 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Container started: openhands-runtime-d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351. VSCode URL: None
+[92m10:54:55 - openhands:INFO[0m: docker_runtime.py:174 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Waiting for client to become ready at http://localhost:37857...
+[92m10:55:23 - openhands:INFO[0m: docker_runtime.py:180 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Runtime is ready.
+10:55:24 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+10:55:40 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting owncloud...
+{"message":"Reset ownCloud command initiated"}
+Reset initiated for services: owncloud
+Waiting for services to be ready...
+Service owncloud healthcheck status: 500
+Service owncloud not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service owncloud healthcheck status: 200
+All services are ready!
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+10:55:40 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+10:55:41 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- owncloud
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m10:55:41 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['owncloud']
+[92m10:55:41 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:41 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:8092")
+[92m10:55:43 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:43 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:55:45 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:45 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("106", "theagentcompany")
+[92m10:55:48 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:48 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:55:50 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:50 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("109", "theagentcompany")
+[92m10:55:52 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:52 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:55:55 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:55 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("111")
+[92m10:55:57 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+10:55:57 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m10:56:00 - openhands:INFO[0m: browsing.py:239 - Skipping login for rocketchat because it's not in the list of services to reset
+[92m10:56:00 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m10:56:00 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m10:56:00 - openhands:INFO[0m: base.py:770 - [runtime d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m10:56:00 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m10:56:00 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m10:56:00 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:56:00 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:56:00 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:56:00 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:56:00 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:56:00 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:56:00 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:56:00 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] AgentController d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351 - created new state. start_id: 0
+[92m10:56:00 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m10:56:50 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:56:50 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:56:50 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:56:50 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:56:53 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m10:56:53 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m10:56:53 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m10:56:53 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m10:59:55 - openhands:INFO[0m: agent_controller.py:1167 - [Agent Controller d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Context window exceeded. Keeping events with IDs: {0, 1, 2, 4, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54}
+[92m11:00:58 - openhands:INFO[0m: agent_controller.py:1167 - [Agent Controller d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Context window exceeded. Keeping events with IDs: {0, 1, 2, 4, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61}
+[92m11:01:43 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:01:43 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:01:43 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:01:43 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:01:58 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller d50e32b4-42bb-4c66-b382-73a8c5109d65-f312cf2144e5a351] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m11:01:59 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m11:01:59 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:01:59 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-new-grad-job-description-image.json" --result_path "/outputs/eval_hr-new-grad-job-description-image.json"
+11:02:55 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 1712
+INFO:root:First 100 characters of decrypted content:
+from typing import List
+
+from scoring import Result, Checkpoint
+
+from common import evaluate_with_l
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+ERROR:root:Error: The file '/workspace/link.txt' was not found.
+INFO:root:result is: {'checkpoints': [{'total': 1, 'result': 0}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}], 'final_score': {'total': 3, 'result': 0}}
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+================ DOCKER BUILD STARTED ================
+Deleted Volumes:
+d01b4f6e95cbbf76e2ee4075bea9730145d90a14f7f89c116197a16341c72eb3
+
+Total reclaimed space: 261.3MB
+Running evaluation for task: hr-new-grad-job-description-2
+Use released image ghcr.io/theagentcompany/hr-new-grad-job-description-2-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m11:03:03 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-new-grad-job-description-2-image:1.0.0, short name is hr-new-grad-job-description-2-image
+[92m11:03:03 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m11:03:04 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_weenzvidyujr3k72_zv28h9xsnoq3zhn4
+[92m11:08:07 - openhands:ERROR[0m: docker.py:196 - Image build failed:
+Command '['docker', 'buildx', 'build', '--progress=plain', '--build-arg=OPENHANDS_RUNTIME_VERSION=0.42.0', '--build-arg=OPENHANDS_RUNTIME_BUILD_TIME=2025-11-11T11:03:06.176491', '--tag=ghcr.io/all-hands-ai/runtime:oh_v0.42.0_weenzvidyujr3k72_zv28h9xsnoq3zhn4', '--load', '/tmp/tmpbiyc93qs']' returned non-zero exit status 1.
+[92m11:08:07 - openhands:ERROR[0m: docker.py:197 - Command output:
+
+================ DOCKER BUILD STARTED ================
+ERROR:root:  File "/root/TheAgentCompany/evaluation/run_mcp_eval.py", line 309, in <module>
+    call_async_from_sync(runtime.connect)
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 54, in call_async_from_sync
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 44, in run
+    return asyncio.run(arun())
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/utils/async_utils.py", line 37, in arun
+    result = await coro
+             ^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 158, in connect
+    self.maybe_build_runtime_container_image()
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/impl/docker/docker_runtime.py", line 200, in maybe_build_runtime_container_image
+    self.runtime_container_image = build_runtime_image(
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/utils/runtime_build.py", line 136, in build_runtime_image
+    result = build_runtime_image_in_folder(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/utils/runtime_build.py", line 231, in build_runtime_image_in_folder
+    _build_sandbox_image(
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/utils/runtime_build.py", line 361, in _build_sandbox_image
+    image_name = runtime_builder.build(
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/runtime/builder/docker.py", line 188, in build
+    raise subprocess.CalledProcessError(
+
+ERROR:root:<class 'subprocess.CalledProcessError'>: Command '['docker', 'buildx', 'build', '--progress=plain', '--build-arg=OPENHANDS_RUNTIME_VERSION=0.42.0', '--build-arg=OPENHANDS_RUNTIME_BUILD_TIME=2025-11-11T11:03:06.176491', '--tag=ghcr.io/all-hands-ai/runtime:oh_v0.42.0_weenzvidyujr3k72_zv28h9xsnoq3zhn4', '--load', '/tmp/tmpbiyc93qs']' returned non-zero exit status 1.
+Total reclaimed space: 0B
+Running evaluation for task: hr-new-grad-job-description-3
+Use released image ghcr.io/theagentcompany/hr-new-grad-job-description-3-image:1.0.0...
+/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/pydub/utils.py:174: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+[92m11:08:13 - openhands:INFO[0m: run_mcp_eval.py:260 - Task image name is ghcr.io/theagentcompany/hr-new-grad-job-description-3-image:1.0.0, short name is hr-new-grad-job-description-3-image
+[92m11:08:13 - openhands:INFO[0m: run_mcp_eval.py:41 - Successfully load MCP config from ./config.toml.
+[92m11:08:13 - openhands:INFO[0m: runtime_build.py:181 - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zuy8nz9m3wwnlxl5_zv28h9xsnoq3zhn4
+[92m11:08:13 - openhands:INFO[0m: docker_runtime.py:159 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.42.0_zuy8nz9m3wwnlxl5_zv28h9xsnoq3zhn4
+[92m11:08:13 - openhands:WARNING[0m: docker_runtime.py:315 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Using host network mode. If you are using MacOS, please make sure you have the latest version of Docker Desktop and enabled host network feature: https://docs.docker.com/network/drivers/host/#docker-desktop
+[92m11:08:13 - openhands:INFO[0m: docker_runtime.py:163 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Container started: openhands-runtime-ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449. VSCode URL: None
+[92m11:08:13 - openhands:INFO[0m: docker_runtime.py:174 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Waiting for client to become ready at http://localhost:30527...
+[92m11:08:43 - openhands:INFO[0m: docker_runtime.py:180 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Runtime is ready.
+11:08:45 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export SERVER_HOSTNAME="localhost" && export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export no_proxy="localhost,127.0.0.1,the-agent-company.com" && echo "" | sudo tee -a /etc/hosts && bash /utils/init.sh
+11:09:30 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Resetting services...
+Resetting rocketchat...
+{"message":"Reset RocketChat command initiated"}
+Resetting owncloud...
+{"message":"Reset ownCloud command initiated"}
+Reset initiated for services: rocketchat owncloud
+Waiting for services to be ready...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 500
+Service owncloud not ready yet (attempt 1)...
+Waiting 5 seconds before next check...
+Service rocketchat healthcheck status: 200
+Service owncloud healthcheck status: 200
+All services are ready!
+Launching Zhang Wei
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Zhang Wei"
+Launching Li Ming
+LITELLM_API_KEY='******' LITELLM_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1 LITELLM_MODEL=openai/qwen-plus python_default /npc/run_one_npc.py --agent_name="Li Ming"
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+11:09:30 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cat /utils/dependencies.yml
+11:09:30 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+- rocketchat
+- owncloud
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+[92m11:09:30 - openhands:INFO[0m: run_mcp_eval.py:314 - Service dependencies: ['rocketchat', 'owncloud']
+[92m11:09:30 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:30 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:8092")
+[92m11:09:33 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:33 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:35 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:35 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("106", "theagentcompany")
+[92m11:09:38 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:38 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:40 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:40 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("109", "theagentcompany")
+[92m11:09:42 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:42 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:45 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:45 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("111")
+[92m11:09:47 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:47 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:49 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:49 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: goto("http://the-agent-company.com:3000")
+[92m11:09:53 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:53 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:55 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:55 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("52", "theagentcompany")
+[92m11:09:57 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:57 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:09:59 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:09:59 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: fill("57", "theagentcompany")
+[92m11:10:00 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:10:00 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: noop(1000)
+[92m11:10:02 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:10:02 - ACTION
+**BrowseInteractiveAction**
+BROWSER_ACTIONS: click("60")
+[92m11:10:05 - openhands:INFO[0m: browsing.py:239 - Skipping login for gitlab because it's not in the list of services to reset
+[92m11:10:05 - openhands:INFO[0m: browsing.py:239 - Skipping login for plane because it's not in the list of services to reset
+[92m11:10:05 - openhands:INFO[0m: base.py:770 - [runtime ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Selected repo: None, loading microagents from /outputs/.openhands/microagents (inside runtime)
+[92m11:10:05 - openhands:INFO[0m: memory.py:252 - Loading user workspace microagents: []
+[92m11:10:05 - openhands:WARNING[0m: mcp_config.py:182 - No search engine API key found, skipping search engine
+[92m11:10:05 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:10:05 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:10:05 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:10:05 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:05 - openhands:INFO[0m: utils.py:232 - Loaded 4 MCP tools: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:05 - openhands:INFO[0m: agent.py:169 - Setting 4 MCP tools for agent CodeActAgent: ['analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:05 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 10: ['execute_bash', 'think', 'finish', 'browser', 'execute_ipython_cell', 'str_replace_editor', 'analyze_image_with_qwen', 'get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:05 - openhands:INFO[0m: agent_controller.py:1041 - [Agent Controller ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] AgentController ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449 - created new state. start_id: 0
+[92m11:10:05 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m11:10:13 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:10:13 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:10:13 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:10:13 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:16 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:10:16 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:10:16 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:10:16 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:19 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:10:19 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:10:19 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:10:19 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:23 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:8082/sse' api_key='******' with SSE connection...
+[92m11:10:23 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['analyze_image_with_qwen']
+[92m11:10:23 - openhands:INFO[0m: utils.py:77 - Initializing MCP agent for url='http://localhost:4567/sse' api_key='******' with SSE connection...
+[92m11:10:23 - openhands:INFO[0m: client.py:49 - Connected to server with tools: ['get_platform_guide_list', 'get_operation_details', 'update_operation_guide']
+[92m11:10:42 - openhands:ERROR[0m: agent_controller.py:317 - [Agent Controller ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Error while running the agent (session ID: ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449): litellm.NotFoundError: NotFoundError: DeepseekException - . Traceback: Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 110, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 557, in post
+    raise e
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 538, in post
+    response.raise_for_status()
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://api.deepseek.com/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/main.py", line 1409, in completion
+    raise e
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/main.py", line 1384, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 362, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 131, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 959, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.openai.common_utils.OpenAIError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/controller/agent_controller.py", line 315, in _step_with_exception_handling
+    await self._step()
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/controller/agent_controller.py", line 834, in _step
+    action = self.agent.step(self.state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/agenthub/codeact_agent/codeact_agent.py", line 190, in step
+    response = self.llm.completion(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/openhands/llm/llm.py", line 291, in wrapper
+    resp: ModelResponse = self._completion_unwrapped(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/utils.py", line 1193, in wrapper
+    raise e
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/utils.py", line 1071, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/main.py", line 3090, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2202, in exception_type
+    raise e
+  File "/root/.cache/pypoetry/virtualenvs/theagentcompany-YkfFLfgZ-py3.12/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 400, in exception_type
+    raise NotFoundError(
+litellm.exceptions.NotFoundError: litellm.NotFoundError: NotFoundError: DeepseekException - 
+
+[92m11:10:42 - openhands:ERROR[0m: loop.py:24 - NotFoundError: litellm.NotFoundError: NotFoundError: DeepseekException - 
+[92m11:10:42 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+[92m11:10:42 - openhands:INFO[0m: agent_controller.py:598 - [Agent Controller ae0774b5-4639-43cb-a45f-e24e78382f84-4ae2adb524f55449] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+[92m11:10:43 - openhands:INFO[0m: run_mcp_eval.py:193 - Evaluation starting ...
+[92m11:10:43 - openhands:WARNING[0m: event.py:96 - Timeout greater than 600 seconds may not be supported by the runtime. Consider setting a lower timeout.
+11:10:43 - ACTION
+**CmdRunAction (source=None, is_input=False)**
+COMMAND:
+export LITELLM_API_KEY="sk-326d3629fead49b8ab54750b4869fc80" && export LITELLM_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1" && export LITELLM_MODEL="openai/qwen-plus" && export DECRYPTION_KEY="theagentcompany is all you need" && python -m pip install -q rocketchat_API redis_om sotopia odfpy pdf2image astor pymupdf && python /utils/eval.py --trajectory_path "/outputs/traj_hr-new-grad-job-description-3-image.json" --result_path "/outputs/eval_hr-new-grad-job-description-3-image.json"
+11:11:40 - OBSERVATION
+**CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "ecs-d984",
+  "working_dir": "/outputs",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+INFO:root:Decryption successful
+INFO:root:Decrypted content length: 2287
+INFO:root:First 100 characters of decrypted content: import logging
+
+from typing import List
+
+from scoring import Result, Checkpoint
+from common import e
+INFO:root:Decrypted content written to /utils/evaluator.py
+INFO:httpx:HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+INFO:root:Chat history with zhang_wei is: []
+INFO:root:Chat history with li_ming is: []
+ERROR:root:Error: The file '/workspace/link.txt' was not found.
+INFO:root:result is: {'checkpoints': [{'total': 1, 'result': 0}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}, {'total': 1, 'result': 0}], 'final_score': {'total': 5, 'result': 0}}
+[The command completed with exit code 0.]
+[Current working directory: /outputs]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+Deleted Volumes:
+df90bc528aacfa56f6cab7d5b5852287209a46b712bee35c7e2bc1cd5b4b2455
+
+Total reclaimed space: 261.3MB
+All evaluation completed successfully!
